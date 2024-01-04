@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Suspense } from "react";
 import Navbar from "@/components/Navbar";
+import bg from "../assets/bg-textured.png";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-slate-800 text-slate-100`}>
+      <body
+        className={`${inter.className} text-slate-100`}
+        style={{
+          background: `url(${bg.src})`,
+          backgroundRepeat: "repeat",
+          height: "300vh",
+        }}
+      >
         <header>
           <Navbar />
         </header>
