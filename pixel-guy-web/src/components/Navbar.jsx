@@ -54,13 +54,13 @@ export const Navbar = () => {
       variants={navVariants}
       animate={state.reveal ? "hidden" : "visible"}
       transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}
-      className={`shadow-md w-full fixed top-0 left-0 transition-all duration-[1s] ease-in`}
+      className={`shadow-md w-full z-50 fixed top-0 left-0 transition-all duration-[1s] ease-in`}
     >
       <div className="md:flex items-center justify-between bg-transparent py-4 md:px-10 px-7">
         {/* logo section */}
         <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
           <Image src={logo} className="w-10 h-10 text-blue-600" />
-          <span>PixelGuy</span>
+          <span className="text-white">PixelGuy</span>
         </div>
         {/* Menu icon */}
         <div
