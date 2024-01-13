@@ -2,7 +2,12 @@
 import React, { useEffect, useState } from "react";
 import "../style/HomepageHeroCarousel.style.css";
 import Image from "next/image";
-import { Button, Typography } from "@material-tailwind/react";
+import { Archivo_Black } from "next/font/google";
+
+const abzFont = Archivo_Black({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export function HomepageHeroCarousel({ children }) {
   const [counter, setCounter] = useState(1);
@@ -65,7 +70,9 @@ export function HomepageHeroCarousel({ children }) {
               />
               <div className="absolute inset-0 grid p-6 md:p-16 h-full w-full place-items-start bg-black/50">
                 <div className="w-full h-full flex flex-col justify-center md:justify-end items-start">
-                  <h1 className="mb-4 text-white font-bold md:py-4 text-start text-shadow uppercase text-4xl md:text-4xl lg:text-6xl">
+                  <h1
+                    className={`${abzFont.className} mb-4 text-white font-bold md:py-4 text-start text-shadow uppercase text-4xl md:text-4xl lg:text-6xl`}
+                  >
                     {item.title}
                   </h1>
                   <p className="mb-12 text-white text-start text-xl text-shadow md:text-xl lg:text-2xl opacity-80">
