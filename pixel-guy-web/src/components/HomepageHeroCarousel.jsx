@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "../style/HomepageHeroCarousel.style.css";
+import Image from "next/image";
+import { Button, Typography } from "@material-tailwind/react";
 
 export function HomepageHeroCarousel({ children }) {
   const [counter, setCounter] = useState(1);
@@ -53,7 +55,34 @@ export function HomepageHeroCarousel({ children }) {
             className={counter - 1 === index ? "show" : "not-show"}
             key={index}
           >
-            {item}
+            <div className="relative h-full w-full">
+              <Image
+                src={item.src}
+                alt="image 1"
+                className="h-full w-full object-cover"
+                fill={true}
+                loading="lazy"
+              />
+              <div className="absolute inset-0 grid p-6 md:p-16 h-full w-full place-items-start bg-black/50">
+                <div className="w-full h-full flex flex-col justify-center md:justify-end items-start">
+                  <h1 className="mb-4 text-white font-bold md:py-4 text-start text-shadow uppercase text-4xl md:text-4xl lg:text-6xl">
+                    {item.title}
+                  </h1>
+                  <p className="mb-12 text-white text-start text-xl text-shadow md:text-xl lg:text-2xl opacity-80">
+                    Artists and Innovators in the World of Digital
+                    Entertainment.
+                  </p>
+                  {/* <div className="flex justify-center gap-2">
+                    <Button size="lg" color="white">
+                      Explore
+                    </Button>
+                    <Button size="lg" color="white" variant="text">
+                      Gallery
+                    </Button>
+                  </div> */}
+                </div>
+              </div>
+            </div>
           </div>
         ))}
 

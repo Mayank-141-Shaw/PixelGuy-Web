@@ -2,8 +2,7 @@
 import React, { useEffect, useState } from "react";
 
 import { HiMiniXMark, HiMiniBars3BottomRight } from "react-icons/hi2";
-import { FaTimesCircle } from "react-icons/fa";
-import { motion, useScroll } from "framer-motion";
+import { CgMenuRound } from "react-icons/cg";
 
 import logo from "../assets/logo.svg";
 import Image from "next/image";
@@ -23,57 +22,49 @@ export const Navbar = () => {
     reveal: false,
   });
 
-  const { scrollY } = useScroll();
-
+  const toggleNavbar = () => {
+    setState({ ...state, open: !state.open });
+  };
   const pathname = usePathname();
 
-  const update = () => {
-    if (scrollY?.get < scrollY?.getPrevious) {
-      setState({ ...state, reveal: false });
-      console.log("visible");
-    } else if (
-      scrollY?.getVelocity > 100 &&
-      scrollY?.get > scrollY?.getPrevious
-    ) {
-      setState({ ...state, reveal: true });
-      console.log("hidden");
-    }
-  };
-
-  useEffect(() => {
-    return scrollY.on("change", () => update());
-  });
-
-  const navVariants = {
-    visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: -25 },
-  };
+  useEffect(() => {}, [state]);
 
   return (
-    <motion.nav
-      variants={navVariants}
-      animate={state.reveal ? "hidden" : "visible"}
-      transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}
-      className={`shadow-md w-full z-50 fixed top-0 left-0 transition-all duration-[1s] ease-in`}
+    <nav
+      className={`w-full z-50 fixed top-0 left-0 transition-all duration-[0.5s] ease-in ${
+        state.open ? "bg-gray-900 md:bg-transparent" : "bg-transparent"
+      } md:p-4`}
     >
-      <div className="md:flex items-center justify-between bg-transparent py-4 md:px-10 px-7">
+      <div className="md:flex items-center justify-between p-4 md:px-10">
         {/* logo section */}
-        <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
-          <Image src={logo} className="w-10 h-10 text-blue-600" />
-          <span className="text-white">PixelGuy</span>
-        </div>
+        <Link href={"/"}>
+          <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
+            <Image src={logo} className="w-10 h-10 text-blue-600" />
+            <span className="text-white">PixelGuy</span>
+          </div>
+        </Link>
         {/* Menu icon */}
         <div
-          onClick={() => setState({ ...state, open: !open })}
-          className="absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7"
+          onClick={toggleNavbar}
+          className="absolute right-6 top-6 flex justify-center items-center cursor-pointer md:hidden w-7 h-7"
         >
-          {state.open ? <HiMiniXMark /> : <HiMiniBars3BottomRight />}
+          {state.open ? (
+            <HiMiniXMark
+              color="white"
+              className="transition-all duration-[0.5s] ease-in-out"
+            />
+          ) : (
+            <HiMiniBars3BottomRight
+              color="white"
+              className="transition-all duration-[0.5s] ease-in-out"
+            />
+          )}
         </div>
         {/* linke items */}
         <ul
-          className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:p-0 px-9 transition-all duration-500 ease-in ${
+          className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:p-0 px-9 transition-all duration-[0.6s] ease-in ${
             state.open
-              ? "top-16 rounded-b-lg shadow-md bg-slate-700"
+              ? "top-16 rounded-b-lg bg-gray-900 md:bg-transparent"
               : "top-[-500%] bg-transparent"
           }`}
         >
@@ -85,10 +76,8 @@ export const Navbar = () => {
               >
                 <span
                   className={`${
-                    pathname === link.link
-                      ? "text-yellow-500"
-                      : "text-white border-b-2 border-transparent"
-                  } transition-all duration-250 ease-in hover:text-yellow-400`}
+                    pathname === link.link ? "text-yellow-500" : "text-white"
+                  } transition-all text-shadow-sm duration-250 ease-in hover:text-yellow-400 drop-shadow-2xl`}
                 >
                   {link.name}
                 </span>
@@ -101,7 +90,7 @@ export const Navbar = () => {
         </ul>
         {/* button */}
       </div>
-    </motion.nav>
+    </nav>
   );
 };
 

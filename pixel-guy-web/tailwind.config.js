@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const withMT = require("@material-tailwind/react/utils/withMT");
+const plugin = require("tailwindcss/plugin");
 // import withMT from "@material-tailwind/react/utils/withMT";
 
 module.exports = withMT({
@@ -15,7 +16,23 @@ module.exports = withMT({
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      textShadow: {
+        DEFAULT: "0 2px 4px #000",
+        sm: "0 2px 2px #000",
+        lg: "0 4px 10px #000",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "text-shadow": (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme("textShadow") }
+      );
+    }),
+  ],
 });
