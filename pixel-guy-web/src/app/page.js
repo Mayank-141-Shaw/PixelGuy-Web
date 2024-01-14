@@ -16,7 +16,7 @@ const carouselContent = [
   },
   {
     src: heroImg3,
-    title: "Software Solutions",
+    title: "Software Development",
   },
   {
     src: heroImg4,
@@ -26,8 +26,8 @@ const carouselContent = [
 
 export default function Home() {
   return (
-    <main>
+    <>
       <HomepageHeroCarousel>{carouselContent}</HomepageHeroCarousel>
-    </main>
+    </>
   );
 }

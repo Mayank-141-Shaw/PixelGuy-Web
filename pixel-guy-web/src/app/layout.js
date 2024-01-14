@@ -1,8 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Suspense } from "react";
-import Navbar from "@/components/Navbar";
 import bg from "../assets/bg-textured.png";
+import AppLayout from "./app_layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,13 +21,9 @@ export default function RootLayout({ children }) {
         style={{
           background: `url(${bg.src})`,
           backgroundRepeat: "repeat",
-          height: "300vh",
         }}
       >
-        <header>
-          <Navbar />
-        </header>
-        {children}
+        <AppLayout>{children}</AppLayout>
       </body>
     </html>
   );
