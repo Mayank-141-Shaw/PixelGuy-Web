@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.className} text-slate-100`}
+        className={`${inter.className} text-slate-100 scroll-smooth`}
         style={{
           background: `url(${bg.src})`,
           backgroundRepeat: "repeat",

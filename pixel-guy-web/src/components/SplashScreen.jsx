@@ -16,7 +16,7 @@ export const SplashScreen = ({ finishLoading }) => {
 
     loader.add({
       targets: "#logo",
-      delay: 300,
+      delay: 1000,
       keyframes: [
         { scale: 1, opacity: 1 },
         { scale: 2, opacity: 1 },
@@ -37,7 +37,7 @@ export const SplashScreen = ({ finishLoading }) => {
   return (
     <main
       className="w-full h-[100vh] bg-transparent flex justify-center items-center"
-      isMounted={isMounted}
+      ismounted={isMounted}
     >
       <Image id={"logo"} src={logo} className="w-[10vw]" />
     </main>

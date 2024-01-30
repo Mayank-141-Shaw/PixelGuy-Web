@@ -2,7 +2,8 @@
 import Navbar from "@/components/Navbar";
 import SplashScreen from "@/components/SplashScreen";
 import { usePathname } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import SmoothScroll from "@/components/SmoothScroll";
 
 export default function AppLayout({ children }) {
   const pathname = usePathname();
@@ -18,7 +19,8 @@ export default function AppLayout({ children }) {
       {loading && isHome ? (
         <SplashScreen finishLoading={() => setLoading(false)} />
       ) : (
-        <main>
+        <main className="h-screen w-screen">
+          <SmoothScroll />
           <header>
             <Navbar />
           </header>
