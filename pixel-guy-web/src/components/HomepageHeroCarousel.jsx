@@ -87,7 +87,7 @@ export function HomepageHeroCarousel({ children }) {
                     {item?.content}
                   </motion.p>
                   <Link
-                    href={"/"}
+                    href={item.link ? item.link : "/"}
                     className="rounded-md flex px-6 py-3 transition-all duration-300 ease-in-out shadow-md items-center gap-4 hover:bg-gray-800 hover:text-white bg-gray-200 uppercase text-lg"
                   >
                     <Image src={logo} className="w-10" />{" "}

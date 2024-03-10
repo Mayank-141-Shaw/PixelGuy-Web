@@ -7,14 +7,14 @@ export function ImageToken(props) {
   return (
     <motion.div
       initial={{ x: props.xi, y: props.yi }}
-      whileInView={{ x: 0, y: 0 }}
+      whileInView={{ x: props.xf, y: props.yf }}
       // viewport={{ once: true }}
-      transition={{ ease: "easeOut", duration: 1 }}
-      className={`absolute top-[${props.top}px] left-[${props.left}px] w-[350px] h-[350px] z-${props.z}`}
+      transition={{ ease: "easeOut", duration: 1.5 }}
+      className={`absolute w-[20vw] h-[20vw] z-${props.z} hover:brightness-70 rounded-lg cursor-pointer object-fit overflow-hidden`}
     >
       <Image
         src={props.src}
-        className="h-full shadow-lg rounded-lg object-cover"
+        className="transition-all ease duration-[1s] h-full shadow-lg rounded-lg object-cover hover:scale-125"
       />
     </motion.div>
   );

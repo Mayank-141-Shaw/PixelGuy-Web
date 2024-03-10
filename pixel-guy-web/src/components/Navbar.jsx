@@ -12,8 +12,7 @@ import Link from "next/link";
 export const Navbar = () => {
   let Links = [
     { name: "HOME", link: "/" },
-    { name: "SERVICE", link: "/service" },
-    { name: "ABOUT", link: "/about" },
+    { name: "SERVICES", link: "/service" },
     { name: "CONTACT", link: "/contact" },
   ];
 
@@ -84,9 +83,9 @@ export const Navbar = () => {
               </Link>
             </li>
           ))}
-          <button className="btn bg-blue-600 text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static">
+          {/* <button className="btn bg-blue-600 text-white md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static">
             Get Started
-          </button>
+          </button> */}
         </ul>
         {/* button */}
       </div>

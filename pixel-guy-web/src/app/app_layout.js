@@ -4,6 +4,8 @@ import SplashScreen from "@/components/SplashScreen";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 import SmoothScroll from "@/components/SmoothScroll";
+import { Footer } from "@/components/Footer";
+import { useRouter } from "next/router";
 
 export default function AppLayout({ children }) {
   const pathname = usePathname();
@@ -25,6 +27,7 @@ export default function AppLayout({ children }) {
             <Navbar />
           </header>
           {children}
+          <Footer />
         </main>
       )}
     </>

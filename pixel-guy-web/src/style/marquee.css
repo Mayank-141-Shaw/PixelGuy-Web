@@ -1,0 +1,42 @@
+@keyframes slider {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.scroller {
+  max-width: 100vw;
+  outline: 3px solid lime;
+  flex-wrap: wrap;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+}
+
+.inner_scroller {
+  width: max-content;
+  display: inline-flex;
+  gap: 1rem;
+}
+
+.tag-list {
+  margin: 0;
+  padding-inline: 0;
+  list-style: none;
+}
+
+.tag-list li {
+  padding: 1rem;
+}
+
+.tag-list li img {
+  width: 80px;
+}
+
+.scroller[data-animated="true"] .inner_scroller {
+  flex-wrap: nowrap;
+}
