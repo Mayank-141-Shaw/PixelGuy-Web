@@ -203,14 +203,15 @@ export default function Home() {
             href={"/contact/#mail-btn"}
             className="rounded-md w-fit mt-16 flex px-6 py-3 transition-all duration-300 ease-in-out shadow-md items-center gap-4 hover:bg-gray-800 hover:text-white bg-gray-200 uppercase text-lg"
           >
-            <Image src={logo} className="w-10" />{" "}
+            <Image alt="logo" src={logo} className="w-10" />{" "}
             <span className="font-semibold">Get a quote</span>
           </Link>
         </p>
         <div className="flex w-[100vw] translate-y-[10vw] -translate-x-[10vw]">
-          <Image src={heroImg4} className="w-[50vw] z-0" />
+          <Image alt="bg" src={heroImg4} className="w-[50vw] z-0" />
           <Image
             src={heroImg3}
+            alt="bg"
             className="w-[50vw] z-10 -translate-x-[90%] translate-y-[15%]"
           />
         </div>
@@ -238,6 +239,7 @@ export default function Home() {
         </p>
         <Image
           src={clientMap}
+          alt="map"
           className="w-full py-16 drop-shadow-[0_5px_10px_rgba(255,255,0,0.8)]"
         />
       </section>
@@ -255,7 +257,7 @@ export default function Home() {
           href={"/contact/#mail-btn"}
           className="rounded-md w-fit mt-8 flex px-6 py-3 transition-all duration-300 ease-in-out shadow-md items-center gap-4 hover:bg-gray-800 hover:text-white hover:shadow-yellow-500 bg-gray-200 uppercase text-lg"
         >
-          <Image src={logo} className="w-10" />{" "}
+          <Image alt="logo" src={logo} className="w-10" />{" "}
           <span className="font-semibold">Get a quote</span>
         </Link>
       </section>

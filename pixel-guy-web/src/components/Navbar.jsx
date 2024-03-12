@@ -38,7 +38,7 @@ export const Navbar = () => {
         {/* logo section */}
         <Link href={"/"}>
           <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
-            <Image src={logo} className="w-10 h-10 text-blue-600" />
+            <Image alt="logo" src={logo} className="w-10 h-10 text-blue-600" />
             <span className="text-white">PixelGuy</span>
           </div>
         </Link>
@@ -67,8 +67,8 @@ export const Navbar = () => {
               : "top-[-500%] bg-transparent"
           }`}
         >
-          {Links.map((link) => (
-            <li className="md:ml-8 md:my-0 my-7 font-semibold ">
+          {Links.map((link, id) => (
+            <li key={id} className="md:ml-8 md:my-0 my-7 font-semibold ">
               <Link
                 href={link.link}
                 className="text-white transition-all duration-500 ease-in  duration-500 flex items-center justify-center"

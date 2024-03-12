@@ -62,6 +62,7 @@ export const Footer = (props) => {
           </div>
           <div className="font-bold text-2xl cursor-pointer flex items-center gap-1 border-2 rounded-lg border-black p-2">
             <Image
+              alt="logo"
               src={logo}
               className="w-10 h-10 text-blue-600 drop-shadow-md"
             />

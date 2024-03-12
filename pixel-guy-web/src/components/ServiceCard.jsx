@@ -17,7 +17,11 @@ export const ServiceCard = (props) => {
         className="relative flex flex-col justify-between aspect-square"
         href={props.link || ""}
       >
-        <Image src={props.src} className="h-full object-cover rounded-lg" />
+        <Image
+          alt="img"
+          src={props.src}
+          className="h-full object-cover rounded-lg"
+        />
         <span className="text-white text-center text-xl uppercase absolute inset-0 flex items-end justify-center p-4 md:p-8 text-shadow font-bold">
           {props.title}
         </span>

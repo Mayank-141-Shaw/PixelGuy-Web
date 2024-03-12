@@ -30,8 +30,9 @@ export default function Service() {
           viewport={{ once: true }}
           className="text-[7vw] md:text-[3vw] text-white font-bold text-shadow mt-16"
         >
-          More than technology, it's human-centered innovation: Partner with us
-          to achieve your goals
+          {
+            "More than technology, it's human-centered innovation: Partner with us to achieve your goals"
+          }
         </motion.h3>
       </section>
       <section className="grid grid-cols-1 md:grid-cols-3 justify-between gap-4 md:gap-16 p-16 mt-16 mb-16">

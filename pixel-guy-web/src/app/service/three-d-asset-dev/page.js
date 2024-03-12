@@ -59,6 +59,7 @@ export const ThreeDAssetPage = () => {
         >
           <div className="relative flex flex-col justify-between h-full ">
             <Image
+              alt="img"
               src={assetImg1}
               className="h-full object-cover rounded-lg w-fit"
             />
@@ -72,7 +73,11 @@ export const ThreeDAssetPage = () => {
           className="rounded-lg bg-gray-800 w-full md:w-[177%] shadow-[0_32px_48px_rgba(0,0,0,0.8)] hover:cursor-pointer"
         >
           <div className="relative h-full flex flex-col justify-between">
-            <Image src={assetImg3} className="h-full object-cover rounded-lg" />
+            <Image
+              alt="img"
+              src={assetImg3}
+              className="h-full object-cover rounded-lg"
+            />
           </div>
         </motion.div>
 
@@ -85,7 +90,11 @@ export const ThreeDAssetPage = () => {
           className="rounded-lg bg-gray-800 h-full w-[120%] shadow-[0_32px_48px_rgba(0,0,0,0.8)] hover:cursor-pointer"
         >
           <div className="relative h-full flex flex-col justify-between">
-            <Image src={assetImg2} className="h-full object-cover rounded-lg" />
+            <Image
+              alt="img"
+              src={assetImg2}
+              className="h-full object-cover rounded-lg"
+            />
           </div>
         </motion.div>
       </section>
@@ -98,7 +107,7 @@ export const ThreeDAssetPage = () => {
           href={"/contact/#mail-btn"}
           className="rounded-md w-fit flex px-6 md:ml-8 py-3 transition-all duration-300 ease-in-out shadow-md items-center gap-4 hover:bg-gray-800 hover:text-white bg-gray-200 uppercase text-lg"
         >
-          <Image src={logo} className="w-10" />{" "}
+          <Image alt="img" src={logo} className="w-10" />{" "}
           <span className="font-semibold">Get a quote</span>
         </Link>
       </section>

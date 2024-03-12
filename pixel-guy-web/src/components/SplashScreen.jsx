@@ -39,7 +39,7 @@ export const SplashScreen = ({ finishLoading }) => {
       className="w-full h-[100vh] bg-transparent flex justify-center items-center"
       ismounted={isMounted}
     >
-      <Image id={"logo"} src={logo} className="w-[10vw]" />
+      <Image alt="logo" id={"logo"} src={logo} className="w-[10vw]" />
     </main>
   );
 };
