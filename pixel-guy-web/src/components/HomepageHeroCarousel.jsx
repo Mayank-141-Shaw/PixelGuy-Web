@@ -65,7 +65,7 @@ export function HomepageHeroCarousel({ children }) {
                 alt="image 1"
                 className="h-full w-full object-cover"
                 fill={true}
-                loading="lazy"
+                loading="eager"
               />
               <div className="absolute inset-0 grid p-6 md:p-16 h-full w-full place-items-start bg-black/50">
                 <div className="w-full h-full flex flex-col justify-center md:justify-end items-start">
