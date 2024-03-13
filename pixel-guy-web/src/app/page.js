@@ -113,7 +113,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section className="w-full p-4 md:p-16 h-[80vw]">
+      <section className="w-full p-4 md:p-16 h-[90vw] md:h-[80vw]">
         <motion.h1 className="text-[6vw] text-white font-bold text-shadow">
           Works
         </motion.h1>
@@ -163,8 +163,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full bg-yellow-500 p-16">
-        <div className="flex gap-4 justify-center">
+      <section className="w-full bg-yellow-500 p-8 md:p-16">
+        <div className="flex flex-col md:flex-row gap-4 items-center md:justify-center">
           <div className="flex drop-shadow">
             <FaYoutube className="text-red-600" size={"18vw"} />
             <Image
@@ -175,23 +175,23 @@ export default function Home() {
               }}
             />
           </div>
-          <div className="flex flex-col justify-center items-start">
+          <div className="flex flex-col justify-center items-center md:items-start">
             <i className="text-[5vw] font-bold text-shadow-md">
               PixelGuy Studios
             </i>
             <br />
             <Link
-              href={"/"}
-              className="rounded-md flex px-6 py-3 transition-all duration-300 ease-in-out shadow-md items-center gap-4 hover:bg-gray-800 hover:text-white bg-gray-200 uppercase text-lg"
+              href={"#"}
+              className="rounded-md w-fit flex px-6 py-3 transition-all duration-300 ease-in-out shadow-md items-center gap-4 hover:bg-gray-800 hover:text-white hover:shadow-yellow-500 bg-gray-200 uppercase text-lg"
             >
-              <Image src={logo} className="w-10" />{" "}
+              <Image alt="logo" src={logo} className="w-10" />{" "}
               <span className="font-semibold">Do visit our channel</span>
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="w-full h-[100vh] overflow-x-hidden relative flex bg-yellow-900 p-16 justify-start items-start transition-all ease duration-[1s]">
+      <section className="w-full hidden md:block h-[80vw] md:h-[100vh] overflow-x-hidden relative flex bg-yellow-900 p-16 justify-start items-start transition-all ease duration-[1s]">
         <p className="w-[150vw] font-bold text-[4vw] z-20">
           We are <span className="bg-blue-500 text-white">PixelGuy.</span>
           <br /> A creative agency that puts{" "}
@@ -201,7 +201,7 @@ export default function Home() {
           <br />
           <Link
             href={"/contact/#mail-btn"}
-            className="rounded-md w-fit mt-16 flex px-6 py-3 transition-all duration-300 ease-in-out shadow-md items-center gap-4 hover:bg-gray-800 hover:text-white bg-gray-200 uppercase text-lg"
+            className="rounded-md w-full mt-8 flex px-6 py-3 transition-all duration-300 ease-in-out shadow-md items-center gap-4 hover:bg-gray-800 hover:text-white hover:shadow-yellow-500 bg-gray-200 uppercase text-lg"
           >
             <Image alt="logo" src={logo} className="w-10" />{" "}
             <span className="font-semibold">Get a quote</span>
@@ -230,7 +230,7 @@ export default function Home() {
           initial={{ y: 200, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
-          className="pl-[10vw] w-[80vw] text-[1.5vw] mt-8 text-center font-bold text-shadow text-white"
+          className="md:pl-[10vw] w-full md:w-[80vw] text-[4vw] md:text-[1.5vw] mt-8 text-center font-bold text-shadow text-white"
         >
           We have seamlessly provided our services for clients at home and
           abroad. The atlas below shows the nations around the world where we
@@ -249,13 +249,13 @@ export default function Home() {
           initial={{ y: 200, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
-          className=" text-[3vw] mt-8 text-center font-bold text-shadow text-white"
+          className=" text-[4vw] md:text-[3vw] mt-8 text-center font-bold text-shadow text-white"
         >
           One stop for all your technical needs
         </motion.p>
         <Link
           href={"/contact/#mail-btn"}
-          className="rounded-md w-fit mt-8 flex px-6 py-3 transition-all duration-300 ease-in-out shadow-md items-center gap-4 hover:bg-gray-800 hover:text-white hover:shadow-yellow-500 bg-gray-200 uppercase text-lg"
+          className="rounded-md w-fit mt-4 flex px-6 py-3 transition-all duration-300 ease-in-out shadow-md items-center gap-4 hover:bg-gray-800 hover:text-white hover:shadow-yellow-500 bg-gray-200 uppercase text-lg"
         >
           <Image alt="logo" src={logo} className="w-10" />{" "}
           <span className="font-semibold">Get a quote</span>
