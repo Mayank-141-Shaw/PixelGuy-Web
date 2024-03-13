@@ -57,7 +57,7 @@ const carouselContent = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col overflow-hidden">
       <HomepageHeroCarousel>{carouselContent}</HomepageHeroCarousel>
 
       <section className="w-full md:p-16 h-[39vh] md:h-[90vh] lg:h-[170vh]">
@@ -113,7 +113,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section className="w-full p-4 md:p-16 h-[90vw] md:h-[80vw]">
+      <section className="w-full mt-8 p-4 md:p-16 h-[90vw] md:h-[80vw]">
         <motion.h1 className="text-[6vw] text-white font-bold text-shadow">
           Works
         </motion.h1>
@@ -217,7 +217,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full p-4 md:p-16">
+      <section className="w-full mt-8 p-4 md:p-16">
         <motion.h1
           initial={{ y: 200, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
